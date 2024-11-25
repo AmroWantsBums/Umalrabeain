@@ -1,0 +1,61 @@
+body{
+    background-color: black;
+    transition: all 0.9s ease;
+}
+
+#pre-load-dot{
+    z-index: 9999;
+    width: 14px;
+    height: 14px;
+    background: orange;
+    position: absolute;
+    left: 46.8%;
+    top: 45.8%;
+    border-radius: 80%;
+    animation: loadFromTop 0.4s ease;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+#umalrabeain-logo{
+    position: absolute;
+    width: 30vw;
+    aspect-ratio: 43 / 18;
+    left: 35%;
+    top: 38%;
+    opacity: 0;
+    transition: all 0.4s ease;
+    mix-blend-mode: multiply;   
+}
+
+
+@keyframes loadFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes loadFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes loadFromTop {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
