@@ -1,0 +1,101 @@
+#nav-bar{
+    width: min-content;
+    position: absolute;
+    margin-right: 0;
+    margin-bottom: 0;
+    top: 41%;
+    right: 1%;
+    padding: 0;
+}
+
+#nav-bar ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 1.4vw;
+    gap: 0.5vw;
+}
+
+.navBarOption{
+    position: relative;
+    display: flex;
+    border-radius: 24px;
+    width: 11vw;
+    margin-right: 1vw;
+    height: 4vh;
+    justify-content: center;
+    padding-bottom: 0;
+    align-items: center;
+    animation: loadOption 0.5s ease forwards;
+}
+
+.navBarOption a{
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 12vh;
+}
+
+
+.make-wider {
+    animation: makeWider 0.5s ease forwards;
+}
+
+@keyframes loadOption{
+    from {
+        top: 50px;
+    }
+    to {
+        top: 0px;
+    }
+}
+
+@keyframes makeWider{
+    from {
+        width: 38px;
+        background-color: rgb(0, 0, 0);
+    }
+    to {
+        width: 80%;
+        background-color: pink;
+    }
+}
+
+
+.navLogo {
+    height: 60%; /* Adjust the height as needed */
+    margin-left: auto; /* Push logo to the right */
+    padding-right: 3%;
+}
+
+#name-logo{
+    width: 12%;
+    font-size: 2vw;
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+    line-height: 1;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+#name-section{
+    padding-top: 2%;
+    width: 40%;
+    margin-right: 2vw;
+    margin: 0vh 2vw 0 0.4vw;
+}
