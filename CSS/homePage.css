@@ -4,21 +4,33 @@
     padding: 0;
     margin: 0;
     position: absolute;
-    top: -19vh;
-    left: -9vw;
+    top: 0vh;
+    left: 14vw;
+}
+
+body{
+    overflow-x: hidden;
 }
 
 main{
-    height: 80rem;
-    display: flex;
+    height: 80vh;
+    width: 100vw;
+    position: relative;
+    left: 0;
     justify-content: center;
 }
 
 #hero{
     position: relative;
-    top: 22vh;
+    top: 0vh;
     border-radius: 2vw;
-    width: 40vw;
-    height: 40vh;
+    width: 100%;
     background-color: #83838348;
+}
+
+#bg{
+    position: relative;
+    margin-right: -20vw;
+    top: 8vh;
+    right: 8vw;
 }
