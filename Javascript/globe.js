@@ -31,53 +31,43 @@ const material = new THREE.MeshStandardMaterial({
     map: uvTexture,        // Diffuse map (Earth's surface)
     normalMap: normalMap,  // Normal map for surface detail
     normalScale: new THREE.Vector2(1, 4),  // Normal map strength
-    specularMap: specularMap, // Specular map for reflections
+    specularMap: specularMap, 
 });
 
-// Cloud material with transparency
 const cloudMaterial = new THREE.MeshBasicMaterial({
-    map: cloudTexture,        // Cloud texture
-    transparent: true,        // Make clouds transparent
-    opacity: 0.081,           // Adjust the cloud opacity to make them more subtle
+    map: cloudTexture,       
+    transparent: true,       
+    opacity: 0.081,    
 });
 
-// Create geometry for Earth and Clouds
-const sphereGeometry = new THREE.SphereGeometry(15, 64, 32); // Earth geometry
-const cloudGeometry = new THREE.SphereGeometry(15.2, 64, 32); // Cloud sphere (slightly larger)
+const sphereGeometry = new THREE.SphereGeometry(15, 64, 32); 
+const cloudGeometry = new THREE.SphereGeometry(15.2, 64, 32); 
 
-// Create Earth and Cloud meshes
 const sphere = new THREE.Mesh(sphereGeometry, material);
 const cloudMesh = new THREE.Mesh(cloudGeometry, cloudMaterial);
 
-// Add both Earth and Cloud meshes to the scene
 scene.add(sphere);
 scene.add(cloudMesh);
 
-// Pointer to track mouse position
 const pointer = new THREE.Vector2();
 
-// Mouse move event handler
 const onMouseMove = (event) => {
-    // Normalize the mouse position to the range [-1, 1]
     pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
     pointer.y = (event.clientY / window.innerHeight) * 2 + 1;
 };
 
-// Add event listener for mouse movement
 window.addEventListener('mousemove', onMouseMove);
 
 // Animation loop
 function animate() {
     requestAnimationFrame(animate);
 
-    // Directly control the rotation of the Earth and clouds based on the mouse position
-    sphere.rotation.x = pointer.y * Math.PI * 2; // Directly set the x rotation based on pointer.y
-    sphere.rotation.y = pointer.x * Math.PI * 2; // Directly set the y rotation based on pointer.x
+    sphere.rotation.x = pointer.y * Math.PI * 2; 
+    sphere.rotation.y = pointer.x * Math.PI * 2; 
 
-    cloudMesh.rotation.x = pointer.y * Math.PI * 0.5; // Clouds rotate based on pointer.y (slightly slower)
-    cloudMesh.rotation.y = pointer.x * Math.PI * 0.5; // Clouds rotate based on pointer.x (slightly slower)
+    cloudMesh.rotation.x = pointer.y * Math.PI * 0.5; 
+    cloudMesh.rotation.y = pointer.x * Math.PI * 0.5; 
 
-    // Render the scene with transparent background
     renderer.render(scene, camera);
 }
 
