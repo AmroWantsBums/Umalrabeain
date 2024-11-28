@@ -17,11 +17,11 @@ renderer.setSize(window.innerWidth / 3.5, window.innerHeight / 3.5);
 renderer.setClearColor(0x000000, 0);  // 0x000000 is black, and 0 alpha is fully transparent
 
 // Add ambient light
-const ambientLight = new THREE.AmbientLight(0x9cd5fa);
+const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(ambientLight);
 
 // Load textures
-const uvTexture = new THREE.TextureLoader().load("../Images/8k_earth_daymap.jpeg");      // Earth diffuse texture
+const uvTexture = new THREE.TextureLoader().load("../Images/8k_earth_nightmap.jpg");      // Earth diffuse texture
 const normalMap = new THREE.TextureLoader().load("../Images/8k_earth_normal_map_(0-00-00-00).jpg");  // Earth normal map
 const specularMap = new THREE.TextureLoader().load("../Images/8k_earth_specular_map.png");   // Earth specular map
 const cloudTexture = new THREE.TextureLoader().load("../Images/8k_earth_clouds.jpeg");      // Cloud texture

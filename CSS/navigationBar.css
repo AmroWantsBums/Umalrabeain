@@ -99,3 +99,17 @@ header{
     margin-right: 2vw;
     margin: 0vh 2vw 0 0.4vw;
 }
+
+#work-dropdown{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(201, 216, 230, 0.678);
+    width: 11vw;
+    text-align: center;
+    gap: 2vh;
+    transition: all 0.4s ease;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+}

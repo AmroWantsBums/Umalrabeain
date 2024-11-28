@@ -1,11 +1,12 @@
 #main-heading{
     color: #000000;    
-    font-size: 14vw;
+    font-size: 15vw;
     padding: 0;
     margin: 0;
     position: absolute;
     top: 0vh;
-    left: 14vw;
+    left: 0vw;
+    text-align: center;
 }
 
 body{
