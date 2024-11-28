@@ -1,3 +1,5 @@
+import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.module.js";
+
 // Create scene and camera
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -49,12 +51,12 @@ scene.add(cloudMesh);
 
 const pointer = new THREE.Vector2();
 
-const onMouseMove = (event) => {
+const onMouseMoved = (event) => {
     pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
     pointer.y = (event.clientY / window.innerHeight) * 2 + 1;
 };
 
-window.addEventListener('mousemove', onMouseMove);
+window.addEventListener('mousemove', onMouseMoved);
 
 // Animation loop
 function animate() {
