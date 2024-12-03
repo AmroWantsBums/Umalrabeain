@@ -1,0 +1,31 @@
+aside ul {
+    width: 20vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-evenly;
+    position: fixed;
+    border-right: solid;
+}
+
+ul li{
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+#main-content{
+    width: 68vw; 
+    position: relative;
+    left: 24vw;
+    padding: 2vw;
+    top: 2vh;
+}
+
+h1{
+    font-size: 2vw;
+}
+
+#main-content p{
+    font-size: 1.4vw;
+}

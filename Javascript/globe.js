@@ -11,7 +11,7 @@ const renderer = new THREE.WebGLRenderer({
     alpha: true  // Enable transparency
 });
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth / 3.5, window.innerHeight / 3.5);
+renderer.setSize(window.innerWidth / 4.5, window.innerHeight / 4.5);
 
 // Set the clear color to transparent (alpha = 0)
 renderer.setClearColor(0x000000, 0);  // 0x000000 is black, and 0 alpha is fully transparent

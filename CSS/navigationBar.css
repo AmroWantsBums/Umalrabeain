@@ -4,7 +4,7 @@
     margin-right: 0;
     margin-bottom: 0;
     top: 41%;
-    right: 1%;
+    right: 0%;
     padding: 0;
 }
 
@@ -38,13 +38,15 @@
 }
 
 header{
-    position: sticky;
+    position: fixed;
     top: 0; 
     z-index: 1000; 
     display: flex;
     margin: 0;
     padding: 0;
     height: 12vh;
+    width: 100%;
+    background-color: #b0d0d3;
 }
 
 
