@@ -2,8 +2,8 @@
 const navPages = [
     {name: "Home" , href: '/Umalrabeain/index.html'},
     {name: "Our Work" , href: '/Umalrabeain/General Trade/generalTrade.html'},
-    {name: "Meet Umalrabeain" , href: '/Umalrabeain/About Me/About-Me.html'},
-    {name: "Contact" , href: '/Umalrabeain/About Me/About-Me.html'}
+    {name: "Meet Umalrabeain" , href: '/Umalrabeain/Our Team/meetUs.html'},
+    {name: "Contact" , href: '/Umalrabeain/Contact/contact.html'}
 ];
 
 // Function to load the navbar based on the current page name
