@@ -1,0 +1,70 @@
+#contact-heading{
+    font-size: 5vw;
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 4vh;
+}
+
+#contact-section{
+    width: 45%;
+    height: 50vh;
+    display: flex;
+    background-color: rgba(240, 248, 255, 0.334);
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    padding: 2vw;
+    border-radius: 20px;
+    margin-bottom: 3vh;
+}
+
+#email-button{
+    position: relative;
+    width: 5vw;
+    height: 7vh;
+}
+
+#phone-button{
+    position: relative;
+    width: 5vw;
+    height: 7vh;
+}
+
+
+.card {
+    width: 40%;
+    height: 70%;  
+}
+
+.card p {
+    font-size: 1.1vw;
+}
+
+.card h2{
+    font-size: 2vw;
+}
+
+#call-card{
+    border-right: solid;
+    padding-right: 2vw;
+}
+
+#footer{
+    border-top: solid;
+    padding-top: 2vh;
+    height: 7vh;
+    margin-top: 0vh;
+    width: 92%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,9 +1,9 @@
 // Array to hold navigation page details with names and links
 const navPages = [
-    {name: "Home" , href: '/Amro-Ahmed-Portfolio/index.html'},
-    {name: "Our Work" , href: '/Amro-Ahmed-Portfolio/About Me/About-Me.html'},
-    {name: "Meet Umalrabeain" , href: '/Amro-Ahmed-Portfolio/About Me/About-Me.html'},
-    {name: "Contact" , href: '/Amro-Ahmed-Portfolio/About Me/About-Me.html'}
+    {name: "Home" , href: '/Umalrabeain/index.html'},
+    {name: "Our Work" , href: '/Umalrabeain/General Trade/generalTrade.html'},
+    {name: "Meet Umalrabeain" , href: '/Umalrabeain/About Me/About-Me.html'},
+    {name: "Contact" , href: '/Umalrabeain/About Me/About-Me.html'}
 ];
 
 // Function to load the navbar based on the current page name
@@ -22,22 +22,22 @@ export function loadNavbar(CurrentPageName){
             a.innerText = page.name; // Set the text of the link to the page name
             a.setAttribute("href", page.href); // Set the href attribute to the page's link
             li.appendChild(a); // Append the anchor to the list item            
-            if (page.name == "Our Work"){
-                let dropdown = document.createElement("div");
-                dropdown.id = "work-dropdown";
-                dropdown.innerHTML = `
-                        <a href="#" class="dropdown-option">Medical Equipment</a>
-                        <a href="#" class="dropdown-option">Perfume</a>
-                        <a href="#" class="dropdown-option">General Trade</a>
-                `;
-                li.appendChild(dropdown);
-                li.addEventListener("mouseover", function(){
-                    dropdown.style.opacity = "1";
-                })
-                li.addEventListener("mouseleave", function(){
-                    dropdown.style.opacity = "0";
-                })
-            }
+            // if (page.name == "Our Work"){
+            //     let dropdown = document.createElement("div");
+            //     dropdown.id = "work-dropdown";
+            //     dropdown.innerHTML = `
+            //             <a href="#" class="dropdown-option">Medical Equipment</a>
+            //             <a href="#" class="dropdown-option">Perfume</a>
+            //             <a href="#" class="dropdown-option">General Trade</a>
+            //     `;
+            //     li.appendChild(dropdown);
+            //     li.addEventListener("mouseover", function(){
+            //         dropdown.style.opacity = "1";
+            //     })
+            //     li.addEventListener("mouseleave", function(){
+            //         dropdown.style.opacity = "0";
+            //     })
+            // }
         } 
         else {
             // If it's the current page, just display the name

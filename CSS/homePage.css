@@ -1,6 +1,6 @@
 #main-heading{
     color: #000000;    
-    font-size: 16vw;
+    font-size: 14vw;
     padding: 0;
     margin: 0;
     position: absolute;
@@ -32,7 +32,156 @@ main{
 
 #bg{
     position: relative;
-    margin-right: -20vw;
+    margin-right: -16vw;
     top: 3vh;
-    right: 8vw;
+    right: 6vw;
+}
+
+#main-content{
+    position: relative;
+    top: 100vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#vision-section{
+    padding-top: 25vh;
+    width: 80vw;
+    position: relative;
+    margin-left: 0vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+#vision-section h2{
+    font-size: 12vw;
+    text-align: center;
+    color: rgb(178 178 178);
+    mix-blend-mode: difference;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#vision-section p{
+    font-size: 1.7vw;
+    padding: 1vw;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+#globe-image{
+    aspect-ratio: 600 / 900;
+    width: 22vw;
+    position: absolute;
+    left: 15vw;
+    top: 15vh;
+    z-index: -5;
+    transition: all 0.5s ease;
+}
+
+#why-section{
+    margin-top: 19vh;
+    display: flex;
+    width: 80vw;
+    flex-direction: column;
+    position: relative;
+    margin-left: 0vw;
+    transition: all 0.5s ease;
+}
+
+#why-section h2{
+    font-size: 12vw;
+    color: rgb(178 178 178);
+    mix-blend-mode: difference;
+    margin-top: 0;
+    margin-bottom: 0;
+    transition: all 0.5s ease;
+}
+
+#why-section p {
+    font-size: 1.7vw;
+    padding-top: 0vw;
+    margin-top: 0;
+    text-align: center;
+    transition: all 0.5s ease;
+    width: 54vw;
+    opacity: 0;
+    padding-left: 23vw;
+}
+
+#question-image{
+    aspect-ratio: 600 / 899;
+    width: 20vw;
+    z-index: -5;
+    position: absolute;
+    left: 34vw;
+    top: 32vh;
+    transition: all 0.5s ease;
+}
+
+#scroll-text{
+    position: relative;
+    top: -19vh;
+    transition: all 0.5s ease;
+}
+
+#do-section{
+    border-top: solid;
+    padding-top: 25vh;
+    margin-top: 19vh;
+    display: flex;
+    width: 80vw;
+    flex-direction: column;
+    position: relative;
+    margin-left: 0vw;
+    transition: all 0.5s ease;
+}
+
+#do-section h2{
+    font-size: 12vw;
+    color: rgb(178 178 178);
+    mix-blend-mode: difference;
+    margin-top: 0;
+    margin-bottom: 0;
+    transition: all 0.5s ease;
+}
+
+#do-section p {
+    font-size: 1.7vw;
+    padding-top: 0vw;
+    margin-top: 0;
+    text-align: center;
+    transition: all 0.5s ease;
+    width: 54vw;
+    opacity: 0;
+    padding-left: 23vw;
+    position: relative;
+    bottom: 27vh;
+}
+
+#city-image{
+    aspect-ratio: 600 / 899;
+    width: 20vw;
+    z-index: -5;
+    position: absolute;
+    left: 34vw;
+    top: 28vh;
+    transition: all 0.5s ease;
+}
+
+#footer{
+    border-top: solid;
+    padding-top: 2vh;
+    height: 12vh;
+    margin-top: 10vh;
+    width: 92%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

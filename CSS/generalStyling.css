@@ -40,3 +40,61 @@ body {
     display: none;
 }                
     
+.buttons {
+    border: none;
+    position: relative; 
+    overflow: hidden;
+    background-color: #939393; 
+    color: black; 
+    transition: color 0.5s ease;
+    display: inline-block;
+}
+
+.buttons::before {
+    content: '';
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffffff, #c5bdbd); 
+    transform: translateX(-100%); 
+    transition: transform 0.5s ease; 
+    z-index: 0; 
+}
+
+.buttons:hover::before {
+    transform: translateX(0);
+}
+
+.buttons:hover {
+    color: rgb(0, 0, 0);
+    cursor: pointer; 
+    background-color: #919191; 
+    z-index: 1; 
+}
+
+.buttons span {
+    position: relative;
+    z-index: 1; 
+    font-size: 0.9vw; 
+}
+
+
+::-webkit-scrollbar {
+    width: 12px; 
+    height: 12px; 
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #b0d0d3, #203537, #b0d0d3); 
+    border-radius: 10px; 
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+}
