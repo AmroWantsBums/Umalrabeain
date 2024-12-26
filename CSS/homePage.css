@@ -9,6 +9,14 @@
     text-align: center;
 }
 
+#main-heading span{
+    margin-left: 5%;
+    position: relative;
+    top: 80%;
+    left: 9.4%;
+    padding-bottom: 161%;
+}
+
 body{
     overflow-x: hidden;
     padding-top: 9vh;
@@ -31,10 +39,9 @@ main{
 }
 
 #bg{
-    position: relative;
-    margin-right: -16vw;
-    top: 3vh;
-    right: 6vw;
+    position: absolute;
+    top: 3%;
+    right: 65%;
 }
 
 #main-content{
@@ -185,3 +192,60 @@ main{
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width: 1050px) {
+    #main-heading span{
+        margin-left: 5%;
+        padding-bottom: 136%;
+    }
+  }
+
+@media screen and (max-width: 905px) {
+    #main-heading span{
+        margin-left: 5%;
+        padding-bottom: 94%;
+    }
+  }
+
+@media screen and (max-width: 800px) {
+    #main-heading span{
+        margin-left: 5%;
+        padding-bottom: 52%;
+    }
+  }
+
+  
+@media screen and (max-width: 700px) {
+    #main-heading span{
+        margin-left: 5%;
+        padding-bottom: 0%;
+    }
+
+    #main-heading{
+        margin-top: 4%;
+    }
+  }
+
+@media screen and (max-width: 570px) {
+    #main-heading span{
+        margin-left: 5%;
+        padding-top: 3%;
+    }
+}
+    
+
+@media screen and (max-width: 480px) {
+    #main-heading span{
+        margin-left: 5%;
+        padding-top: 5%;
+    }
+  }
+    
+
+@media screen and (max-width: 415px) {
+  #main-heading span{
+      margin-left: 5%;
+      padding-top: 7%;
+    }
+}
+    

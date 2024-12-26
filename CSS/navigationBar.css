@@ -44,7 +44,7 @@ header{
     display: flex;
     margin: 0;
     padding: 0;
-    height: 12vh;
+    height: 12%;
     width: 100%;
     background-color: #b0d0d3;
 }
@@ -86,7 +86,8 @@ header{
     font-size: 2vw;
     margin: 0;
     padding: 0;
-
+    margin-top: 2vh;
+    margin-left: 2%;
     text-align: center;
     line-height: 1;
     font-family: sans-serif;
@@ -115,3 +116,12 @@ header{
     position: absolute;
     top: 100%;
 }
+
+
+@media screen and (max-width: 600px) {
+    #name-logo{
+        margin-top: 4vh;
+        margin-left: 2%;
+    }
+  }
+  
