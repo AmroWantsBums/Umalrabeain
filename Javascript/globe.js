@@ -8,9 +8,9 @@ camera.position.setZ(50);
 // Create renderer with transparent background
 const renderer = new THREE.WebGLRenderer({
     canvas: document.querySelector("#bg"),
-    alpha: true // Enable transparency
+    alpha: true, // Enable transparency
 });
-renderer.setPixelRatio(window.devicePixelRatio); // Set pixel ratio for high-DPI displays
+renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth / 5, window.innerHeight / 5);
 camera.aspect = window.innerWidth / window.innerHeight;
 camera.updateProjectionMatrix();
@@ -25,38 +25,68 @@ const normalMap = new THREE.TextureLoader().load("../Images/8k_earth_normal_map_
 const specularMap = new THREE.TextureLoader().load("../Images/8k_earth_specular_map.png");
 const cloudTexture = new THREE.TextureLoader().load("../Images/8k_earth_clouds.jpeg");
 
-// Create sphere and cloud materials
+// Create materials
 const material = new THREE.MeshStandardMaterial({
     map: uvTexture,
     normalMap: normalMap,
     normalScale: new THREE.Vector2(1, 4),
-    specularMap: specularMap
+    specularMap: specularMap,
 });
 
 const cloudMaterial = new THREE.MeshBasicMaterial({
     map: cloudTexture,
     transparent: true,
-    opacity: 0.081
+    opacity: 0.081,
 });
 
-const sphereGeometry = new THREE.SphereGeometry(window.innerWidth * 0.018, 64, 32);
-const cloudGeometry = new THREE.SphereGeometry(window.innerWidth * 0.0182, 64, 32);
+let sphere, cloudMesh;
 
-// Create sphere and cloud meshes
-const sphere = new THREE.Mesh(sphereGeometry, material);
-const cloudMesh = new THREE.Mesh(cloudGeometry, cloudMaterial);
+// Function to create sphere and cloud meshes
+function createMeshes() {
+    const sphereRadius = window.innerWidth * 0.018;
+    const cloudRadius = window.innerWidth * 0.0182;
 
-scene.add(sphere);
-scene.add(cloudMesh);
+    const sphereGeometry = new THREE.SphereGeometry(sphereRadius, 64, 32);
+    const cloudGeometry = new THREE.SphereGeometry(cloudRadius, 64, 32);
+
+    if (sphere) scene.remove(sphere);
+    if (cloudMesh) scene.remove(cloudMesh);
+
+    sphere = new THREE.Mesh(sphereGeometry, material);
+    cloudMesh = new THREE.Mesh(cloudGeometry, cloudMaterial);
+
+    scene.add(sphere);
+    scene.add(cloudMesh);
+}
+
+// Function to handle resizing
+function resizeProportions() {
+    // Update renderer size
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(window.innerWidth / 5, window.innerHeight / 5);
+
+    // Update camera aspect ratio and projection matrix
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    // Recreate meshes to maintain quality
+    createMeshes();
+
+    console.log("Resized and updated meshes.");
+}
+
+// Add resize event listener
+window.addEventListener("resize", resizeProportions);
+
+// Create initial meshes
+createMeshes();
 
 const pointer = new THREE.Vector2();
-let isMouseMoved = false;
 
 // Track mouse movement
 const onMouseMoved = (event) => {
     pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
     pointer.y = (event.clientY / window.innerHeight) * 2 - 1;
-    isMouseMoved = true;
 };
 
 window.addEventListener("mousemove", onMouseMoved);
@@ -65,11 +95,13 @@ window.addEventListener("mousemove", onMouseMoved);
 function animate() {
     requestAnimationFrame(animate);
 
-    sphere.rotation.x = pointer.y * Math.PI * 2; 
-    sphere.rotation.y = pointer.x * Math.PI * 2; 
+    if (sphere && cloudMesh) {
+        sphere.rotation.x = pointer.y * Math.PI * 2;
+        sphere.rotation.y = pointer.x * Math.PI * 2;
 
-    cloudMesh.rotation.x = pointer.y * Math.PI * 0.5; 
-    cloudMesh.rotation.y = pointer.x * Math.PI * 0.5; 
+        cloudMesh.rotation.x = pointer.y * Math.PI * 0.5;
+        cloudMesh.rotation.y = pointer.x * Math.PI * 0.5;
+    }
 
     renderer.render(scene, camera);
 }

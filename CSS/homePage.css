@@ -1,11 +1,6 @@
 #main-heading{
     color: #000000;    
     font-size: 14vw;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 0vh;
-    left: 0vw;
     text-align: center;
 }
 
@@ -33,9 +28,12 @@ main{
 #hero{
     position: relative;
     top: 0vh;
+    height: 80vh;
     border-radius: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    background-color: #83838348;
 }
 
 #bg{
@@ -46,7 +44,7 @@ main{
 
 #main-content{
     position: relative;
-    top: 100vh;
+    margin-top: 12vh;
     height: auto;
     display: flex;
     justify-content: center;
@@ -87,7 +85,6 @@ main{
     width: 22vw;
     position: absolute;
     left: 15vw;
-    top: 15vh;
     z-index: -5;
     transition: all 0.5s ease;
 }
@@ -119,6 +116,7 @@ main{
     transition: all 0.5s ease;
     width: 54vw;
     opacity: 0;
+    position: relative;
     padding-left: 23vw;
 }
 
@@ -126,22 +124,22 @@ main{
     aspect-ratio: 600 / 899;
     width: 20vw;
     z-index: -5;
+    margin-top: 2vh;
     position: absolute;
     left: 34vw;
-    top: 32vh;
     transition: all 0.5s ease;
 }
 
 #scroll-text{
     position: relative;
-    top: -19vh;
+    bottom: 10vh;
     transition: all 0.5s ease;
 }
 
 #do-section{
     border-top: solid;
     padding-top: 25vh;
-    margin-top: 19vh;
+    margin-top: 0vh;
     display: flex;
     width: 80vw;
     flex-direction: column;
@@ -168,8 +166,8 @@ main{
     width: 54vw;
     opacity: 0;
     padding-left: 23vw;
-    position: relative;
-    bottom: 27vh;
+    position: absolute;
+    bottom: 1vh;
 }
 
 #city-image{
@@ -178,6 +176,7 @@ main{
     z-index: -5;
     position: absolute;
     left: 34vw;
+    z-index: -2;
     top: 28vh;
     transition: all 0.5s ease;
 }
@@ -186,7 +185,7 @@ main{
     border-top: solid;
     padding-top: 2vh;
     height: 12vh;
-    margin-top: 10vh;
+    margin-top: 27vh;
     width: 92%;
     display: flex;
     justify-content: center;
@@ -199,6 +198,12 @@ main{
         padding-bottom: 136%;
     }
   }
+
+@media screen and (max-width: 965px) {
+    #why-section {
+        margin-bottom: 13%;
+    }
+}  
 
 @media screen and (max-width: 905px) {
     #main-heading span{
