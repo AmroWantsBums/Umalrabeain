@@ -35,6 +35,7 @@
 .navBarOption a{
     text-decoration: none;
     color: black;
+    font-size: 1vw;
 }
 
 header{

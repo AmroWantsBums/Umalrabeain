@@ -1,21 +1,64 @@
-#main-heading{
-    color: #000000;    
-    font-size: 14vw;
+#main-heading {
+    color: #000000;
+    font-size: 13vw; /* Scales dynamically with the viewport width */
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Stack the main heading and secondary text vertically */
+    align-items: center;
+    justify-content: center;
+
+}
+
+#text-container {
+    display: flex; /* Aligns pre-text, js-container, and post-text horizontally */
+    align-items: center;
+    gap: 1vw;
+}
+
+#js-container {
+    width: 8vw; /* Dynamically adjust size */
+    height: 8vw; /* Keep it square */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4%;
+}
+
+body {
+    overflow-x: hidden;
+    margin-top: 8vh;
+}
+
+#hero {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-#main-heading span{
-    margin-left: 5%;
-    position: relative;
-    top: 80%;
-    left: 9.4%;
-    padding-bottom: 161%;
+#bg {
+    width: 100%;
+    height: 100%;
 }
 
-body{
-    overflow-x: hidden;
-    padding-top: 9vh;
+#secondary-text {
+    display: block; /* Ensure that 'the world' is on the next line */
 }
+
+
+@media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 480px) {
+   
+}
+
 
 main{
     height: 80vh;
@@ -25,22 +68,6 @@ main{
     justify-content: center;
 }
 
-#hero{
-    position: relative;
-    top: 0vh;
-    height: 80vh;
-    border-radius: 2vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-#bg{
-    position: absolute;
-    top: 3%;
-    right: 65%;
-}
 
 #main-content{
     position: relative;
@@ -124,9 +151,9 @@ main{
     aspect-ratio: 600 / 899;
     width: 20vw;
     z-index: -5;
-    margin-top: 2vh;
     position: absolute;
     left: 34vw;
+    top: 12vh;
     transition: all 0.5s ease;
 }
 
@@ -185,72 +212,9 @@ main{
     border-top: solid;
     padding-top: 2vh;
     height: 12vh;
-    margin-top: 27vh;
+    margin-top: 35vh;
     width: 92%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-@media screen and (max-width: 1050px) {
-    #main-heading span{
-        margin-left: 5%;
-        padding-bottom: 136%;
-    }
-  }
-
-@media screen and (max-width: 965px) {
-    #why-section {
-        margin-bottom: 13%;
-    }
-}  
-
-@media screen and (max-width: 905px) {
-    #main-heading span{
-        margin-left: 5%;
-        padding-bottom: 94%;
-    }
-  }
-
-@media screen and (max-width: 800px) {
-    #main-heading span{
-        margin-left: 5%;
-        padding-bottom: 52%;
-    }
-  }
-
-  
-@media screen and (max-width: 700px) {
-    #main-heading span{
-        margin-left: 5%;
-        padding-bottom: 0%;
-    }
-
-    #main-heading{
-        margin-top: 4%;
-    }
-  }
-
-@media screen and (max-width: 570px) {
-    #main-heading span{
-        margin-left: 5%;
-        padding-top: 3%;
-    }
-}
-    
-
-@media screen and (max-width: 480px) {
-    #main-heading span{
-        margin-left: 5%;
-        padding-top: 5%;
-    }
-  }
-    
-
-@media screen and (max-width: 415px) {
-  #main-heading span{
-      margin-left: 5%;
-      padding-top: 7%;
-    }
-}
-    
