@@ -98,3 +98,9 @@ body {
 body {
     font-family: 'DM Sans', sans-serif;
 }
+
+@media screen and (max-width: 1024px) {
+   #cursor {
+    display: none;
+   }
+}

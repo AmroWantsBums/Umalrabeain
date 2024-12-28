@@ -8,9 +8,9 @@ function updateFontSize() {
         const sectionRect = section.getBoundingClientRect();
         
         if (sectionRect.top <= window.innerHeight && sectionRect.bottom >= 0) {
-            asideItems[index].style.fontSize = "1.5rem";
+            asideItems[index].style.fontSize = "150%";
         } else {
-            asideItems[index].style.fontSize = "1rem"; 
+            asideItems[index].style.fontSize = "120%"; 
         }
     });
 }
@@ -32,13 +32,13 @@ asideItems.forEach(item => {
 
 asideItems.forEach(item => {
     item.addEventListener("mouseover", function(){
-        item.style.fontSize = "1.4rem"
+        item.style.fontSize = "160%"
     })
 })
 
 asideItems.forEach(item => {
     item.addEventListener("mouseleave", function(){
-        item.style.fontSize = "1rem"
+        item.style.fontSize = "120%"
         updateFontSize();
     })
 })
@@ -46,3 +46,4 @@ asideItems.forEach(item => {
 window.addEventListener("scroll", updateFontSize);
 
 updateFontSize();
+

@@ -50,3 +50,12 @@ export function loadNavbar(CurrentPageName){
     nav.appendChild(ul); // Finally, append the ul to the nav element
 }
 
+
+
+document.getElementById('burger-icon').addEventListener('click', function () {
+    const navOptions = document.querySelectorAll('.navBarOption');
+    navOptions.forEach(option => {
+        option.classList.toggle('show');
+    });
+    const navBar = document.querySelector("#nav-bar").classList.toggle("show");
+});

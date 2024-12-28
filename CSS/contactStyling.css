@@ -15,56 +15,72 @@ main{
 }
 
 #contact-section{
-    width: 45%;
-    height: 50vh;
+    height: auto;
     display: flex;
-    background-color: rgba(240, 248, 255, 0.334);
     justify-content: center;
+    gap: 2vw;
     align-items: center;
-    gap: 10%;
-    padding: 2vw;
-    border-radius: 20px;
-    margin-bottom: 3vh;
 }
 
 #email-button{
-    position: relative;
-    width: 5vw;
+    position: absolute;
+    width: 13%;
     height: 7vh;
 }
 
 #phone-button{
-    position: relative;
-    width: 5vw;
+    position: absolute;
+    width: 13%;
     height: 7vh;
 }
 
+#main-content{
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+
+.buttons span{
+    font-size: 0.7rem;
+}
 
 .card {
     width: 40%;
-    height: 70%;  
+    background-color: rgba(240, 248, 255, 0.334);
+    height: 40vh;  
+    padding: 2vw;
+    border-radius: 20px;
 }
 
 .card p {
-    font-size: 1.1vw;
+    font-size: 0.9rem;
 }
 
 .card h2{
-    font-size: 2vw;
-}
-
-#call-card{
-    border-right: solid;
-    padding-right: 2vw;
+    font-size: 2rem;
 }
 
 #footer{
+    position: relative;
+    bottom: 0;
     border-top: solid;
     padding-top: 2vh;
     height: 7vh;
-    margin-top: 0vh;
+    margin-top: 9vh;
     width: 92%;
     display: flex;
+    font-size: 1rem;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    #contact-section {
+        flex-direction: column;
+    }
+    .card {
+        width: 88%;
+    }
 }
