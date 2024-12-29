@@ -83,4 +83,16 @@ main{
     .card {
         width: 88%;
     }
+
+    #email-button{
+        position: absolute;
+        width: 43%;
+        height: 7vh;
+    }
+    
+    #phone-button{
+        position: absolute;
+        width: 43%;
+        height: 7vh;
+    }
 }

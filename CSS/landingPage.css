@@ -2,28 +2,42 @@ body{
     background-color: black;
     transition: all 0.9s ease;
     cursor: none;
+    margin: 0;
+    padding: 0;
 }
 
 #pre-load-dot{
     z-index: 9999;
-    width: 14px;
-    height: 14px;
+    width: 1vw;
+    height: 1vw;
     background: orange;
     position: absolute;
-    left: 46.8%;
-    top: 45.8%;
+    right: 2.3vw;
+    margin-top: 200%;
     border-radius: 80%;
     animation: loadFromTop 0.4s ease;
     opacity: 0;
     transition: all 0.4s ease;
 }
 
-#umalrabeain-logo{
+main{
+    width: 100vw;
+    height: 100vh;
+}
+
+#container{
     position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#umalrabeain-logo{
     width: 30vw;
     aspect-ratio: 43 / 18;
-    left: 35%;
-    top: 38%;
+    position: absolute;
     opacity: 0;
     transition: all 0.4s ease;
     mix-blend-mode: multiply;   
